@@ -41,6 +41,9 @@ jobs:
       - name: Generate today's idea
         run: python generator.py > /tmp/daily-idea.txt
 
+      - name: Print idea
+        run: cat /tmp/daily-idea.txt
+
       - name: Update website
         run: |
           python - <<'PY'
